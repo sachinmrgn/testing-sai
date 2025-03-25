@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>/* Global form styling */
+.fserv-container {
+    border-top: 7px solid var(--form-theme-color);
+    background-color: var(--form-bg-color);
+    padding: 35px;
+    width: 700px;
+    margin: 30px auto;
+    margin-top: 30px;
+}
+
+/* Form input styling */
+.fserv-container .fserv-input-text,
+.fserv-container .fserv-input-radio,
+.fserv-container .fserv-input-checkbox,
+.fserv-container .fserv-select,
+.fserv-container .fserv-select-multiple {
+    border: none;
+    border-bottom: 1px solid var(--form-theme-color);
+    color: black;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 0;
+    line-height: 22px;
+    display: block;
+    padding: 5px;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.fserv-container .fserv-input-text:focus,
+.fserv-container .fserv-input-radio:focus,
+.fserv-container .fserv-input-checkbox:focus,
+.fserv-container .fserv-textarea:focus,
+.fserv-container .fserv-select:focus,
+.fserv-container .fserv-select-multiple:focus {
+    border-bottom: 3px solid var(--form-theme-color);
+    color: var(--form-theme-color);
+    font-weight: 600;
+    outline: none;
+}
+
+/* Textarea styling */
+.fserv-container .fserv-textarea {
+    border: none;
+    border-bottom: 2px solid var(--form-theme-color);
+    color: black;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 0;
+    line-height: 22px;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 10em;
+}
+
+/* Submit button styling */
+.fserv-container button,
+input[type='button'],
+input[type='reset'],
+.fserv-container .fserv-button-submit {
+    font-family: inherit;
+    line-height: 0;
+    font-size: .8em;
+    padding: 0px 20px;
+    height: 36px;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--form-theme-color);
+    color: white;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.fserv-container .fserv-button-submit:hover {
+    background: rgb(103, 179, 187);
+}
+
+/* Form labels */
+.fserv-container .fserv-label {
+    font-weight: 700;
+}
+
+.fserv-container .fserv-required label.fserv-label:after {
+    content: " *";
+    color: red;
+}
+
+/* Select element styling */
+.fserv-container .fserv-select,
+.fserv-container .fserv-select-multiple {
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,...);
+}
+
+/* Checkbox styling */
+.fserv-container .fserv-input-checkbox {
+    margin-left: 0px;
+    display: inline-block;
+    position: relative;
+    -webkit-appearance: none;
+    height: 2em;
+    width: 4em;
+    border-radius: 1.5em;
+    background-color: #E2E5E5;
+    border-color: transparent;
+    color: #919FAF;
+    vertical-align: middle;
+}
+
+.fserv-container .fserv-input-checkbox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.fserv-container .fserv-input-checkbox:checked {
+    color: white;
+    background-color: var(--form-theme-color);
+    border-color: transparent;
+}
+
+.fserv-container .fserv-input-checkbox:checked::before {
+    transform: translateX(100%);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 900px) {
+    .fserv-container {
+        width: 70%;
+    }
+
+    .fserv-container .fserv-input-text,
+    .fserv-container .fserv-input-radio,
+    .fserv-container .fserv-input-checkbox,
+    .fserv-container .fserv-select,
+    .fserv-container .fserv-select-multiple {
+        width: 100%;
+    }
+}
+
+/* Loader styling */
+.fs-webform-loader {
+    margin: auto;
+}
+
+.loader-box {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.loader {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: fsspin 1s linear infinite;
+    border: 3px solid #12344d;
+    border-top: 3px solid #b3dfff;
+    display: block;
+    margin: 25px auto;
+}
+
+#loader-text {
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
+    display: inline-block;
+    margin-top: -20px;
+    height: 100%;
+}
+
+@keyframes fsspin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple HTML boilerplate.</p>
+  <script>
+  src='https://kalogis.myfreshworks.com/crm/sales/web_forms/e82bbe939a846732a1e92581d30f5481f1a84d4189e238095eab9aa4831f14b3/form.js'crossorigin='anonymous' id='fs_e82bbe939a846732a1e92581d30f5481f1a84d4189e238095eab9aa4831f14b3'
+  </script>
+</body>
+
+</html>
